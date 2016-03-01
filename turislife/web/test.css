@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#content{
+	width: 1000px;
+	margin: 0 auto;
+	clear: both;
+}
+
+#header{
+	position: relative;
+	background-color: #66A06D;
+	height: 165px;
+	width: 100%;
+	text-align: center;
+}
+
+#header img{
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+}
+#nav{
+	display: inline-block;
+	max-width: 1000px;
+	max-height: 60px;
+	position: relative;
+	background-color: #66A06D;
+	padding: 0;
+	border-width: 2px 0 2px 0;
+	border-style: solid;
+	border-color: #FFF;
+	margin: 0 auto;
+	vertical-align: bottom;
+	
+}
+
+#nav ul{
+	background-color: #EEE;
+}
+
+#nav ul li{
+	display: block;
+	width: 200px;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	background-color: #66A06D;
+	color: #FFF;
+	margin: 2px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#nav ul li:hover{
+	background-color: #FFF;
+	color: #5F9EA0;
+}
+
+#nav a{
+	text-decoration: none;
+	color: inherit;
+}
+
+#header.fixed{
+  position:fixed;
+  top:0;
+  left: 0;
+  height: 60px;
+  opacity:0.8;
+  z-index:999;
+}
+#header.fixed img{
+	display: none;
+}
+#header.fixed #nav{
+	margin: 0 auto;
+}
+#header.fixed:hover{
+  opacity:1;
+}
+
+#view.spaced{
+	margin-top: 70px;
+}
+
+#view{
+	width: 100%;
+	height: 2000px;
+
+}
+
+#home{
+	background-color: #FAFAFA;
+}
+.post{
+	position: relative;
+}
+
+.post:after{
+	content: "-";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.post a{
+	text-decoration: none;
+	color: #000;
+}
+.post h1{
+	width: 100%;
+	text-align: center;
+	background-color: #66CDAA;
+	color: #FFF;
+	font-size: 15px;
+}
+
+.post a{
+	margin: 10px 5px 5px;
+	border-color: #66CDAA;
+}
+
+.post a:hover{
+	color: #5F9EA0;
+	border-color: #5F9EA0;
+}
+
+.post img{
+	border-radius: 30%;
+	border: 2px solid;
+	border-color: inherit;
+	height: 200px;
+	width: 300px;
+	margin: inherit;
+	float: left;
+}
+.post h2{
+	width: 650px;
+	font-size: 25px;
+	margin: inherit;
+	float: left;
+}
+
+.post p{
+	width: 650px;
+	float: left;
+}
+
+.post hr{
+	float: left;
+	width: calc(100% - 20px);
+	margin: 10px 10px 0;
+	text-align: center;
+	border: none;
+	border-top: medium double #66CDAA;
+}
+.post hr:after{
+	content: "~*~";
+	color: #66CDAA;
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    padding: 0 0.25em;
+	background: #FAFAFA;
+}
+.lugares{
+	background-color: #AAFAAA;
+}
+.estabelecimentos{
+	background-color: #FAAAAA;
+}
+.lugares{
+	background-color: #AAAAFA;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="content-language" content="pt-br" />
+      <title>Layout</title>
+<!--       <link rel="stylesheet" href="test.css" /> -->
+	  <link rel="stylesheet" href="/turislife/web/test.css" />
+
+		<script src="http://code.jquery.com/jquery-latest.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  var nav = $("#header");
+			  var view = $("#view");
+			  
+		         $(window).scroll(function () {
+		              if ($(this).scrollTop() > 160) {
+		                  nav.addClass("fixed");
+		                  view.addClass("spaced");
+		              } else {
+		                  nav.removeClass("fixed");
+		                  view.removeClass("spaced");
+		              }
+		        });
+			 });
+		</script>
+   </head>
+ 
+   <body>
+   <div id="content">
+	   <div id="header">
+	  	  <img src="/turislife/web/images/3_White_logo_on_color1_272x75.png" />
+		  <div id="nav">
+			<ul>
+			 <li><a href="#lugares">Lugares</a></li>
+			 <li><a href="#estabelecimentos">Estabelecimentos</a></li>
+			 <li><a href="#trabalho">Trabalho</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div ng-view>
+			
+		</div>
+	</div>
+	
+      <script src="/turislife/web/js/angular.min.js"></script>
+      <script src="/turislife/web/js/angular-route.min.js"></script>
+
+      <script src="/turislife/web/js/app.js"></script>
+      <script src="/turislife/web/js/controllers.js"></script>
+<!-- 	  <script src="/turislife/web/js/Services/services.js"></script> -->
+   </body>
+</html>
