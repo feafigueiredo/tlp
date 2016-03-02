@@ -5,6 +5,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
 		
 		console.log("Iniciando HomeCtrl!");
 		$scope.posts = PublicacaoService.getPublicacoes();
+		console.log("Recuperado os dados:");
 		console.log($scope.posts[0].id);
 	}
 ]);
