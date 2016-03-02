@@ -45,6 +45,7 @@ app.service('PublicacaoService', ['$http', function($http){
 
 	this.getPublicacao = function(id){
 		var posts = this.getPublicacoes();
+		console.log("Procurando a publicacao -> " + id);
 		for (i = 0; i < posts.length; i++) { 
 		    if(id === posts[i].id){
 		    	console.log("Achei");
