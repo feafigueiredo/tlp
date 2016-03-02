@@ -3,7 +3,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
     function($rootScope, $scope, $location, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
-		//$scope.posts = PublicacaoService.getPublicacoes();
+		$scope.posts = PublicacaoService.getPublicacoes();
 	}
 ]);
 
@@ -46,7 +46,7 @@ app.service('PublicacaoService', ['$http', function($http){
 		var data = "";
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
-	    		console.log("Users: " + response.data.length);
+	    		console.log("Posts: " + response.data.length);
 	    		
 	    		return response.data;
 	        });
