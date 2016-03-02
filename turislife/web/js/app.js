@@ -28,8 +28,8 @@ app.config(function($routeProvider, $locationProvider)
    })
    
   .when('/publicacao/:id', {
-      templateUrl : '/turislife/web/Views/trabalho.html',
-      controller  : 'TrabalhoCtrl',
+      templateUrl : '/turislife/web/Views/publicacao.html',
+      controller  : 'PublicacaoCtrl',
    })
    
    .otherwise ({ redirectTo: '/' });
