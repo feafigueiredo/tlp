@@ -48,6 +48,7 @@ app.service('PublicacaoService', ['$http', function($http){
 		var data = "";
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
+	    		console.log("JSON DATA: " + response.data);
 	    		return response.data;
 	        });
 	};
