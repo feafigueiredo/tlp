@@ -46,7 +46,11 @@ app.service('PublicacaoService', ['$http', function($http){
 	this.getPublicacao = function(id){
 		var posts = this.getPublicacoes();
 		for (i = 0; i < posts.length; i++) { 
-		    if(id === posts[i].id) return posts[i]; 
+		    if(id === posts[i].id){
+		    	console.log("Achei");
+		    	return posts[i]; 
+		    }
+		    console.log("Nao Achei");
 		}
 	}
 	
