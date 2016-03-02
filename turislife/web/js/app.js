@@ -3,7 +3,7 @@ var app = angular.module('app',['ngRoute']);
 app.config(function($routeProvider, $locationProvider)
 {
    // remove o # da url
-   //$locationProvider.html5Mode(true);
+   $locationProvider.html5Mode(true);
  
    $routeProvider
  
@@ -23,6 +23,11 @@ app.config(function($routeProvider, $locationProvider)
    })
 
    .when('/trabalho', {
+      templateUrl : '/turislife/web/Views/trabalho.html',
+      controller  : 'TrabalhoCtrl',
+   })
+   
+  .when('/publicacao/:id', {
       templateUrl : '/turislife/web/Views/trabalho.html',
       controller  : 'TrabalhoCtrl',
    })
