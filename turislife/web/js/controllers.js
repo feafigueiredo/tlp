@@ -6,7 +6,6 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
 		console.log("Iniciando HomeCtrl!");
 		$scope.posts = PublicacaoService.getPublicacoes();
 		console.log("Recuperado os dados:");
-		console.log($scope.posts[0].id);
 	}
 ]);
 
@@ -49,8 +48,8 @@ app.service('PublicacaoService', ['$http', function($http){
 		var data = "";
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
-	    		console.log("JSON DATA: " + response.data.length);
-	    		return JSON.parse(response.data);
+	    		console.log("JSON DATA: " + response.data[0].id);
+	    		return response.data;
 	        });
 	};
 	
