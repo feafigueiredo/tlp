@@ -4,6 +4,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
 		$rootScope.activetab = $location.path();
 		
 		$scope.posts = PublicacaoService.getPublicacoes();
+		console.log($scope.posts[0].id);
 	}
 ]);
 
@@ -46,8 +47,6 @@ app.service('PublicacaoService', ['$http', function($http){
 		var data = "";
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
-	    		console.log("Posts: " + response.data.length);
-	    		
 	    		return response.data;
 	        });
 	};
