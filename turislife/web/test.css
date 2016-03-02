@@ -53,6 +53,11 @@
 	font-weight: bold;
 }
 
+#nav ul li.active{
+	background-color: #FFF;
+	color: #66A06D;
+}
+
 #nav ul li:hover{
 	background-color: #FFF;
 	color: #5F9EA0;
