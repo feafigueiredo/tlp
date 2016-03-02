@@ -3,7 +3,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
     function($rootScope, $scope, $location, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
-		$scope.posts = PublicacaoService.getPublicacoes();
+		//$scope.posts = PublicacaoService.getPublicacoes();
 	}
 ]);
 

@@ -32,9 +32,5 @@ app.config(function($routeProvider, $locationProvider)
       controller  : 'PublicacaoCtrl',
    })
    
-   .when('/404', {
-      templateUrl : '/turislife/web/Views/404.html',
-   })
-   
-   .otherwise ({ redirectTo: '/404' });
+   .otherwise ({ templateUrl : '/turislife/web/Views/404.html' });
 });
