@@ -37,6 +37,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		$rootScope.activetab = $location.path();     
 		console.log($routeParams.id);
 		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
+		console.log("Achei -> " + $scope.post.id);
 	}
 ]);
 
@@ -44,8 +45,9 @@ app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/turislife/web/js/Mock/publicacao.json";
 
 	this.getPublicacao = function(id){
-		var posts = this.getPublicacoes();
 		console.log("Procurando a publicacao -> " + id);
+		var posts = this.getPublicacoes();
+		console.log("Posts totais: " + posts.length);
 		for (i = 0; i < posts.length; i++) { 
 		    if(id === posts[i].id){
 		    	console.log("Achei");
