@@ -3,6 +3,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
     function($rootScope, $scope, $location, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
+		console.log("Iniciando HomeCtrl!");
 		$scope.posts = PublicacaoService.getPublicacoes();
 		console.log($scope.posts[0].id);
 	}
