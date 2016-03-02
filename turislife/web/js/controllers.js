@@ -23,20 +23,20 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location',
 /* LUGARES */
 app.controller('LugaresCtrl', ['$rootScope', '$scope', '$location',
     function($rootScope, $scope, $location){
-	
+		$rootScope.activetab = $location.path();
 	}
 ]);
 
 /* ESTABELECIMENTOS */
 app.controller('EstabelecimentosCtrl', ['$rootScope', '$scope', '$location',
     function($rootScope, $scope, $location){
-                           	
+		$rootScope.activetab = $location.path();
 	}
 ]);
 
 /* TRABALHO */
 app.controller('TrabalhoCtrl', ['$rootScope', '$scope', '$location',
     function($rootScope, $scope, $location){
-                           	
+		$rootScope.activetab = $location.path();                  	
 	}
 ]);
