@@ -36,15 +36,20 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();     
 		console.log($routeParams.id);
-		$scope.img = 'http://www.gazetadopovo.com.br/viver-bem/wp-content/uploads/import/memoriaas_viagens_desenhos_110413.jpg';
-		$scope.title = 'Publicação de estréia';
-		$scope.msg = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non mi quis ligula viverra volutpat at sed massa. Etiam euismod luctus massa id malesuada. Proin interdum metus ac lacus sodales, vel egestas dui tincidunt. Suspendisse nec ligula a neque pulvinar pulvinar. Sed sagittis imperdiet sagittis. In ut massa maximus, finibus tortor sit amet, lacinia mi. Mauris lobortis nisl non metus luctus blandit. Vivamus maximus nibh nec mollis efficitur. Duis a orci ut velit consequat eleifend.';
+		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
 	}
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/turislife/web/js/Mock/publicacao.json";
 
+	this.getPublicacao = function(id){
+		var posts = this.getPublicacoes();
+		for (i = 0; i < posts.length; i++) { 
+		    if(id === posts[i].id) return posts[i]; 
+		}
+	}
+	
 	this.getPublicacoes = function(){
 		var data = "";
 		return $http.get(baseUrl, data)
