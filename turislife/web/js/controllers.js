@@ -50,7 +50,7 @@ app.service('PublicacaoService', ['$http', function($http){
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
 	    		console.log("JSON DATA: " + response.data.length);
-	    		return response.data;
+	    		return JSON.parse(response.data);
 	        });
 	};
 	
