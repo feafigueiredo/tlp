@@ -44,9 +44,18 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 
 app.controller('PublicacoesCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'PublicacaoService',
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
-		$rootScope.activetab = $location.path();     
-		console.log("Area: " + $routeParams.area);
-		console.log("Page: " + $routeParams.page);
+		$rootScope.activetab = $location.path();  
+		
+		switch($routeParams.area){
+		case "estabelecimentos":
+		case "trabalho":
+		case "lugares":
+			console.log("Area: " + $routeParams.area);
+			console.log("Page: " + $routeParams.page);
+			break;
+		default $location.path('/404');
+		}
+
    }
 ]);
 
