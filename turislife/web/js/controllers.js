@@ -1,6 +1,6 @@
 /* HOME */
-app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoService',
-    function($rootScope, $scope, $location, PublicacaoService){
+app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'PublicacaoService',
+    function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
 		switch($routeParams.area){
