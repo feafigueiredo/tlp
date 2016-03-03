@@ -68,8 +68,10 @@ app.service('PublicacaoService', ['$http', function($http){
 		var posts;
 		this.getPublicacoes().then(function(resp){
 			posts = resp;
+			console.log("Posts totais: " + posts.length);
+			
 		});
-		console.log("Posts totais: " + posts.length);
+		
 		for (i = 0; i < posts.length; i++) { 
 		    if(id === posts[i].id){
 		    	console.log("Achei");
@@ -86,7 +88,6 @@ app.service('PublicacaoService', ['$http', function($http){
 		};
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
-	    		console.log("JSON DATA: " + response.data[0].id);
 	    		return response.data;
 	        });
 	};

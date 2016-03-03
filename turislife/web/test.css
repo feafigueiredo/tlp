@@ -92,7 +92,7 @@
 }
 
 #view{
-	width: 100%;
+	width: calc(100% - 20px);
 	height: 2000px;
 	margin: 10px;
 }
