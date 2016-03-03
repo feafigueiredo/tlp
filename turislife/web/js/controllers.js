@@ -3,6 +3,18 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', 'PublicacaoServ
     function($rootScope, $scope, $location, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
+		switch($routeParams.area){
+		case "":
+		case "estabelecimentos":
+		case "trabalho":
+		case "lugares":
+			console.log("Area: " + $routeParams.area);
+			console.log("Page: " + $routeParams.page);
+			break;
+		default $location.path('/404');
+	}
+
+		
 		console.log("Iniciando HomeCtrl!");
 		$scope.posts = PublicacaoService.getPublicacoes();
 		console.log("Recuperado os dados:");
@@ -40,23 +52,6 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		console.log("Achei -> " + $scope.post.id);
 		$window.page_id = $routeParams.id;
 	}
-]);
-
-app.controller('PublicacoesCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'PublicacaoService',
-    function($rootScope, $scope, $location, $routeParams, PublicacaoService){
-		$rootScope.activetab = $location.path();  
-		
-		switch($routeParams.area){
-		case "estabelecimentos":
-		case "trabalho":
-		case "lugares":
-			console.log("Area: " + $routeParams.area);
-			console.log("Page: " + $routeParams.page);
-			break;
-		default $location.path('/404');
-		}
-
-   }
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
