@@ -48,8 +48,8 @@ app.controller('TrabalhoCtrl', ['$rootScope', '$scope', '$location',
 ]);
 
 /* PUBLICACAO */
-app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', '$anchorScroll', 'PublicacaoService',
-    function($rootScope, $scope, $location, $routeParams, $window, $anchorScroll, PublicacaoService){
+app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
+    function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 		$rootScope.activetab = $location.path();   
 		
 		console.log($routeParams.id);
@@ -59,8 +59,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		console.log($scope.post);
 		
 		$window.page_id = $routeParams.id;
-		$location.hash('top');
-		$anchorScroll();
+
 	}
 ]);
 
