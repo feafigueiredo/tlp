@@ -38,6 +38,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		console.log($routeParams.id);
 		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
 		console.log("Achei -> " + $scope.post.id);
+		$window.page_id = $routeParams.id;
 	}
 ]);
 
