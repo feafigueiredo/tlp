@@ -18,12 +18,12 @@ app.config(function($routeProvider, $locationProvider)
    })
    
    .when('/:area', {
-      templateUrl : '/turislife/web/Views/publicacoes.html',
+      templateUrl : '/turislife/web/Views/home.html',
       controller  : 'PublicacoesCtrl',
    })
    
    .when('/:area/:page', {
-      templateUrl : '/turislife/web/Views/publicacoes.html',
+      templateUrl : '/turislife/web/Views/home.html',
       controller  : 'PublicacoesCtrl',
    })
 /*
