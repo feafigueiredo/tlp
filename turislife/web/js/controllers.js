@@ -94,10 +94,3 @@ app.service('PublicacaoService', ['$http', function($http){
 	};
 	
 }]);
-
-app.run(["$rootScope", "$window", '$location', function($rootScope, $window,  $location) {
-
-    $rootScope.$on('$routeChangeSuccess', function(evt, absNewUrl, absOldUrl){
-        $window.scrollTo(0,0);    //scroll to top of page after each route change
-    });
-}]);
