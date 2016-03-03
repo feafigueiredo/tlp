@@ -47,7 +47,8 @@ app.controller('PublicacoesCtrl', ['$rootScope', '$scope', '$location', '$routeP
 		$rootScope.activetab = $location.path();     
 		console.log("Area: " + $routeParams.area);
 		console.log("Page: " + $routeParams.page);
-  ]);
+   }
+]);
 
 app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/turislife/web/js/Mock/publicacao.json";
