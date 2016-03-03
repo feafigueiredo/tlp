@@ -59,6 +59,8 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		console.log($scope.post);
 		
 		$window.page_id = $routeParams.id;
+		$location.hash('top');
+		$anchorScroll();
 	}
 ]);
 
