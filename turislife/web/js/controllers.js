@@ -53,7 +53,9 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		$rootScope.activetab = $location.path();   
 		
 		console.log($routeParams.id);
-		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
+		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
+			$scope.post = resp;
+		});
 		console.log($scope.post);
 		
 		$window.page_id = $routeParams.id;
