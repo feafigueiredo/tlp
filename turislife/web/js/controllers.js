@@ -66,19 +66,20 @@ app.service('PublicacaoService', ['$http', function($http){
 	this.getPublicacao = function(id){
 		console.log("Procurando a publicacao -> " + id);
 		var posts;
-		this.getPublicacoes().then(function(resp){
+		return this.getPublicacoes().then(function(resp){
 			posts = resp;
 			console.log("Posts totais: " + posts.length);
 			
+			for (i = 0; i < posts.length; i++) { 
+			    if(id === posts[i].id){
+			    	console.log("Achei");
+			    	return posts[i]; 
+			    }
+			    console.log("Nao Achei");
+			}
 		});
 		
-		for (i = 0; i < posts.length; i++) { 
-		    if(id === posts[i].id){
-		    	console.log("Achei");
-		    	return posts[i]; 
-		    }
-		    console.log("Nao Achei");
-		}
+		
 	}
 	
 	this.getPublicacoes = function(area, page){
