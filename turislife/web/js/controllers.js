@@ -99,4 +99,5 @@ app.run(["$rootScope", "$window", '$location', function($rootScope, $window,  $l
 
     $rootScope.$on('$routeChangeSuccess', function(evt, absNewUrl, absOldUrl){
         $window.scrollTo(0,0);    //scroll to top of page after each route change
-}}])
+    });
+}]);
