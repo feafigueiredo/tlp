@@ -3,8 +3,9 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
+		console.log("Path: " + $location.path());
+		console.log("Area: " + $routeParams.area);
 		switch($routeParams.area){
-			case "":
 			case "estabelecimentos":
 			case "trabalho":
 			case "lugares":
