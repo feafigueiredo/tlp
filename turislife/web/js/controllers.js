@@ -18,10 +18,9 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 		}
 
 		
-		console.log("Iniciando HomeCtrl!");
-		$scope.posts = PublicacaoService.getPublicacoes();
-		console.log("Recuperado os dados:");
-		console.log($scope.posts);
+		PublicacaoService.getPublicacoes().then(function(resp){
+			$scope.posts = resp;
+		});
 	}
 ]);
 
