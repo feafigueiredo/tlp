@@ -3,22 +3,24 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();
 		
+		var area = "";
+		var page = 1;
 		console.log("Path: " + $location.path());
-		if("/" != $location.path()){			
+		if("/" != $location.path()){	
 			console.log("Area: " + $routeParams.area);
 			switch($routeParams.area){
 				case "estabelecimentos":
 				case "trabalho":
 				case "lugares":
-					console.log("Area: " + $routeParams.area);
-					console.log("Page: " + $routeParams.page);
+					area = $routeParams.area;
+					page = $routeParams.page;
 					break;
 				default: $location.path('/404');
-			};
+			}
 		}
 
 		
-		PublicacaoService.getPublicacoes().then(function(resp){
+		PublicacaoService.getPublicacoes(area, page).then(function(resp){
 			$scope.posts = resp;
 		});
 	}
@@ -50,8 +52,10 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();     
 		console.log($routeParams.id);
-		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
-		console.log("Achei -> " + $scope.post.id);
+		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
+			$scope.post = resp;
+		});
+
 		$window.page_id = $routeParams.id;
 	}
 ]);
@@ -72,8 +76,11 @@ app.service('PublicacaoService', ['$http', function($http){
 		}
 	}
 	
-	this.getPublicacoes = function(){
-		var data = "";
+	this.getPublicacoes = function(area, page){
+		var data = {
+				"area": area,
+				"page": page
+		};
 		return $http.get(baseUrl, data)
 	    	.then(function(response) {
 	    		console.log("JSON DATA: " + response.data[0].id);
