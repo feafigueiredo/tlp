@@ -13,7 +13,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 					console.log("Area: " + $routeParams.area);
 					console.log("Page: " + $routeParams.page);
 					break;
-				default $location.path('/404');
+				default: $location.path('/404');
 			};
 		}
 
