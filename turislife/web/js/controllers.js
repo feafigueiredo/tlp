@@ -52,9 +52,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();     
 		console.log($routeParams.id);
-		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
-			$scope.post = resp;
-		});
+		$scope.post = PublicacaoService.getPublicacao($routeParams.id);
 
 		$window.page_id = $routeParams.id;
 	}
@@ -72,10 +70,8 @@ app.service('PublicacaoService', ['$http', function($http){
 			
 			for (i = 0; i < posts.length; i++) { 
 			    if(id === posts[i].id){
-			    	console.log("Achei");
 			    	return posts[i]; 
 			    }
-			    console.log("Nao Achei");
 			}
 		});
 		
