@@ -12,6 +12,21 @@ app.config(function($routeProvider, $locationProvider)
       controller     : 'HomeCtrl',
    })
  
+   .when('/publicacao/:id', {
+      templateUrl : '/turislife/web/Views/publicacao.html',
+      controller  : 'PublicacaoCtrl',
+   })
+   
+   .when('/:area', {
+      templateUrl : '/turislife/web/Views/publicacoes.html',
+      controller  : 'PublicacoesCtrl',
+   })
+   
+   .when('/:area/:page', {
+      templateUrl : '/turislife/web/Views/publicacoes.html',
+      controller  : 'PublicacoesCtrl',
+   })
+/*
    .when('/lugares', {
       templateUrl : '/turislife/web/Views/lugares.html',
       controller  : 'LugaresCtrl',
@@ -26,11 +41,6 @@ app.config(function($routeProvider, $locationProvider)
       templateUrl : '/turislife/web/Views/trabalho.html',
       controller  : 'TrabalhoCtrl',
    })
-   
-  .when('/publicacao/:id', {
-      templateUrl : '/turislife/web/Views/publicacao.html',
-      controller  : 'PublicacaoCtrl',
-   })
-   
+*/ 
    .otherwise ({ templateUrl : '/turislife/web/Views/404.html' });
 });
