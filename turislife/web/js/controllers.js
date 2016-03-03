@@ -4,16 +4,18 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 		$rootScope.activetab = $location.path();
 		
 		console.log("Path: " + $location.path());
-		console.log("Area: " + $routeParams.area);
-//		switch($routeParams.area){
-//			case "estabelecimentos":
-//			case "trabalho":
-//			case "lugares":
-//				console.log("Area: " + $routeParams.area);
-//				console.log("Page: " + $routeParams.page);
-//				break;
-//			default $location.path('/404');
-//		};
+		if("/" != $location.path()){			
+			console.log("Area: " + $routeParams.area);
+			switch($routeParams.area){
+				case "estabelecimentos":
+				case "trabalho":
+				case "lugares":
+					console.log("Area: " + $routeParams.area);
+					console.log("Page: " + $routeParams.page);
+					break;
+				default $location.path('/404');
+			};
+		}
 
 		
 		console.log("Iniciando HomeCtrl!");
