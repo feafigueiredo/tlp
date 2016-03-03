@@ -48,6 +48,8 @@ app.config(function($routeProvider, $locationProvider)
 app.run(["$rootScope", "$window", '$location', function($rootScope, $window,  $location) {
 
     $rootScope.$on('$routeChangeSuccess', function(evt, absNewUrl, absOldUrl){
+    	console.log("Mudei a rota com sucesso");
         $window.scrollTo(0,0);    //scroll to top of page after each route change
+        console.log("Voltei para o topo!");
     });
 }]);
