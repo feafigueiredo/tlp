@@ -52,13 +52,13 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
     function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 		$rootScope.activetab = $location.path();   
 		
-		console.log($routeParams.id);
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp;
+			console.log("Route Param: " + $routeParams.id);
+			console.log(" Post Param: " + $scope.post.id);
+			$window.page_id = $scope.post.id;
 		});
-		console.log($scope.post);
 		
-		$window.page_id = $routeParams.id;
 	}
 ]);
 
