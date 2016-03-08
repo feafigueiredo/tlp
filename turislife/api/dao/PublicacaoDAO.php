@@ -73,7 +73,7 @@ class PublicacaoDAO{
     		$newPub->area   = $dados[area];
     		$newPub->resumo = $dados[resumo];
     		
-    		$colabDAO = new ColaboradorDAO($db);
+    		$colabDAO = new ColaboradorDAO($this->conn);
     		$colab = new Colaborador();
     		$colab->id = $dados[autor];
     		
