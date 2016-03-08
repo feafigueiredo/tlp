@@ -170,9 +170,11 @@ article p{
 
 section{
 	background-color: #FAFAFA;
-	width: 1000px;
 	margin: 0 auto;
 	clear: both;
+}
+section:first-child{
+	width: 1000px;
 }
 
 footer{
@@ -181,13 +183,14 @@ footer{
 	background-color: #66A06D;
 	border-color: #66A06D; 
 	color: #FFF;
+	margin: 0 auto;
 }
 footer > img{
 	border-radius: 30%;
 	border: 2px solid;
 	border-color: inherit;
 	height: 50px;
-	width: 300px;
+	width: 50px;
 	margin: inherit;
 	float: left;
 }
