@@ -54,10 +54,11 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp;
-			console.log("Route Param: " + $routeParams.id);
-			console.log(" Post Param: " + $scope.post.id);
-			$window.page_id = $scope.post.id;
+		},
+		function(error){
+			$location.path("/404");
 		});
+		$window.page_id = $routeParams.id;
 		
 	}
 ]);
@@ -66,20 +67,13 @@ app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/turislife/web/js/Mock/publicacao.json";
 
 	this.getPublicacao = function(id){
-		console.log("Procurando a publicacao -> " + id);
-		var posts;
-		return this.getPublicacoes().then(function(resp){
-			posts = resp;
-			console.log("Posts totais: " + posts.length);
-			
-			for (i = 0; i < posts.length; i++) { 
-			    if(id === posts[i].id){
-			    	return posts[i]; 
-			    }
-			}
-		});
-		
-		
+		var data = {
+				"id": id
+		};
+		return $http.get(baseUrl, data)
+	    	.then(function(response) {
+	    		return response.data;
+	        });
 	}
 	
 	this.getPublicacoes = function(area, page){

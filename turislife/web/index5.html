@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="app">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="content-language" content="pt-br" />
+      <title>Layout</title>
+      <link rel="stylesheet" href="main.css" />
+<!-- 	  <link rel="stylesheet" href="/turislife/web/test.css" /> -->
+
+		<script src="http://code.jquery.com/jquery-latest.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  var nav = $("nav");
+			  var view = $("#view");
+			  
+		         $(window).scroll(function () {
+		              if ($(this).scrollTop() > 160) {
+		                  nav.addClass("fixed");
+		                  view.addClass("spaced");
+		              } else {
+		                  nav.removeClass("fixed");
+		                  view.removeClass("spaced");
+		              }
+		        });
+			 });
+		</script>
+   </head>
+ 
+   <body>
+   <header>
+   	<img src="images/3_White_logo_on_color1_272x75.png" />
+<!--    	<img src="/turislife/web/images/3_White_logo_on_color1_272x75.png" /> -->
+   </header>
+   <nav>
+   	<ul>
+			 <li ng-class="{active: activetab == '/'}"><a href="/">Página Inicial</a></li>
+			 <li ng-class="{active: activetab == '/lugares'}"><a href="/lugares">Lugares</a></li>
+			 <li ng-class="{active: activetab == '/estabelecimentos'}"><a href="/estabelecimentos">Estabelecimentos</a></li>
+			 <li ng-class="{active: activetab == '/trabalho'}"><a href="/trabalho">Trabalho</a></li>
+			</ul>
+   	</nav>
+	<section ng-view>
+	</section>
+	
+	
+      <script src="/turislife/web/js/angular.min.js"></script>
+      <script src="/turislife/web/js/angular-route.min.js"></script>
+
+      <script src="/turislife/web/js/app.js"></script>
+      <script src="/turislife/web/js/controllers.js"></script>
+<!-- 	  <script src="/turislife/web/js/Services/services.js"></script> -->
+
+	<script id="dsq-count-scr" src="//meusappsesyes.disqus.com/count.js" async></script>
+   </body>
+</html>
