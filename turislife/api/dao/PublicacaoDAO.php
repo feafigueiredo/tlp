@@ -76,7 +76,7 @@ class PublicacaoDAO{
     		$newPub->area   = $dados[area];
     		$newPub->resumo = $dados[resumo];
     		$newPub->titulo = $dados[titulo];
-    		$newPub->img    = $dados[imagem];
+    		$newPub->img    = $dados[img];
     		
     		$colabDAO = new ColaboradorDAO($this->conn);
     		$colab = new Colaborador();
