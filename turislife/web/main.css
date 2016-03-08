@@ -85,12 +85,6 @@ section.spaced{
 	margin-top: 70px;
 }
 
-section{
-	width: calc(100% - 20px);
-	height: 2000px;
-	margin: 10px;
-}
-
 main{
 	height: 1000px;
 }
@@ -170,11 +164,13 @@ article p{
 
 section{
 	background-color: #FAFAFA;
+	width: 1000px;
 	margin: 0 auto;
 	clear: both;
 }
+
 section:first-child{
-	width: 1000px;
+	height: 2000px;
 }
 
 footer{
