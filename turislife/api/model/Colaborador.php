@@ -3,9 +3,7 @@ class Publicacao{
 	// object properties
 	public $id;
 	public $nome;
-	public $data;
-	public $area;
+	public $foto;
 	public $resumo;
-	public $autor;
 }
 ?>

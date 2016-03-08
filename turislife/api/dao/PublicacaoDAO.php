@@ -1,6 +1,8 @@
 <?php
 
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/model/Publicacao.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/model/Colaborador.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/dao/ColaboradorDAO.php';
 
 class PublicacaoDAO{
       
@@ -69,8 +71,13 @@ class PublicacaoDAO{
     		$newPub->nome   = $dados[nome];
     		$newPub->data   = $dados[data];
     		$newPub->area   = $dados[area];
-    		$newPub->autor  = $dados[autor];
     		$newPub->resumo = $dados[resumo];
+    		
+    		$colabDAO = new ColaboradorDAO($db);
+    		$colab = new Colaborador();
+    		$colab->id = $dados[autor];
+    		
+    		$newPub->autor = $colabDAO->get();
     		
     		array_push($this->list, $newPub);
     	}
