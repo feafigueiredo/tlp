@@ -1,10 +1,5 @@
 <?php
 
-// get database connection
-include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/config/Database.php';
-$database = new Database();
-$db = $database->getConnection();
-
 // instantiate dao object
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/dao/PublicacaoDAO.php';
 $dao = new PublicacaoDAO($db);

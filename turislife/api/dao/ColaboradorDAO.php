@@ -1,5 +1,6 @@
 <?php
 
+include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/config/Database.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/model/Colaborador.php';
 
 class ColaboradorDAO{
@@ -13,7 +14,9 @@ class ColaboradorDAO{
     
     // constructor with $db as database connection
     public function __construct($db){
-        $this->conn = $db;
+    	// get database connection
+    	$database = new Database();
+        $this->conn = $database->getConnection();
     }
     
     public function get(){

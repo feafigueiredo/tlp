@@ -1,5 +1,6 @@
 <?php
 
+include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/config/Database.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/model/Publicacao.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/model/Colaborador.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/dao/ColaboradorDAO.php';
@@ -15,7 +16,9 @@ class PublicacaoDAO{
     
     // constructor with $db as database connection
     public function __construct($db){
-        $this->conn = $db;
+    	// get database connection
+    	$database = new Database();
+        $this->conn = $database->getConnection();
     }
     
     public function insert(){
