@@ -107,6 +107,9 @@ body{
 }
 .post{
 	position: relative;
+	background-color: #FAFAFA;
+	margin: 0 1px solid #66CDAA;
+	
 }
 
 .post:after{
