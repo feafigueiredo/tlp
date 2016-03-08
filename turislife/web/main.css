@@ -103,14 +103,25 @@ article{
 	border-width: 0 1px;
 	border-style: solid;
 }
-article.Trabalho{
+.Trabalho{
 	border-color: #66CDAA;
 }
-article.Lugares{
+.Trabalho:first-child{
+	background-color: #66CDAA;
+}
+
+.Lugares{
 	border-color: #CD66AA;
 }
-article.Estabelecimentos{
+.Lugares:first-child{
+	background-color: #CD66AA;
+}
+
+.Estabelecimentos{
 	border-color: #66AACD;
+}
+.Estabelecimentos:first-child{
+	background-color: #66AACD;
 }
 article:after{
 	content: "-";
@@ -127,7 +138,6 @@ article a{
 article h1{
 	width: 100%;
 	text-align: center;
-	background-color: #66CDAA;
 	color: #FFF;
 	font-size: 15px;
 }
