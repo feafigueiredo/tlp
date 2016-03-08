@@ -175,7 +175,7 @@ section:first-child{
 
 footer{
 	width: 1000px;
-	height: 60px;
+	height: 100px;
 	background-color: #66A06D;
 	border-color: #66A06D; 
 	color: #FFF;
@@ -185,9 +185,9 @@ footer > img{
 	border-radius: 30%;
 	border: 2px solid;
 	border-color: inherit;
-	height: 50px;
-	width: 50px;
-	margin: inherit;
+	height: 80px;
+	width: 80px;
+	margin: 10px;
 	float: left;
 }
 footer > h2{
