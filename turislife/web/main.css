@@ -78,7 +78,9 @@ nav.fixed{
   opacity:0.8;
   z-index:999;
 }
-
+nav.fixed:hover{
+	opacity: 1;
+}
 section.spaced{
 	margin-top: 70px;
 }
