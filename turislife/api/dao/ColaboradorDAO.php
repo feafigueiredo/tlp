@@ -18,10 +18,10 @@ class ColaboradorDAO{
     
     public function get(){
     	
-    	$colab = $this->publicacao;
+    	$colab = $this->colaborador;
     	
     	$query = "SELECT id, nome, foto, resumo FROM $this->table_name";
-    	if($user->user != null){
+    	if($colab->id != null){
     		$query = $query . " WHERE id = '$colab->id'";
     	}
     	
