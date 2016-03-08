@@ -56,7 +56,7 @@ class PublicacaoDAO{
     	
     	$pub = $this->publicacao;
     	
-    	$query = "SELECT id, nome, data, area, autor, resumo FROM $this->table_name";
+    	$query = "SELECT id, nome, data, area, autor, resumo, titulo, img FROM $this->table_name";
     	if($user->user != null){
     		$query = $query . " WHERE area like '%$pub->area%'";
     	}
@@ -75,6 +75,8 @@ class PublicacaoDAO{
     		$newPub->data   = $dados[data];
     		$newPub->area   = $dados[area];
     		$newPub->resumo = $dados[resumo];
+    		$newPub->titulo = $dados[titulo];
+    		$newPub->img    = $dados[imagem];
     		
     		$colabDAO = new ColaboradorDAO($this->conn);
     		$colab = new Colaborador();

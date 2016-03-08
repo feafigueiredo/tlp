@@ -7,5 +7,7 @@ class Publicacao{
 	public $area;
 	public $resumo;
 	public $autor;
+	public $titulo;
+	public $img;
 }
 ?>
