@@ -100,8 +100,9 @@ article{
 	background-color: #FAFAFA;
 	width: 1000px;
 	margin: 5px auto 0;
-	border-width: 0 1px;
+	border-width: 0 1px 1px;
 	border-style: solid;
+	border-bottom-style: double;
 }
 .Trabalho{
 	border-color: #66CDAA;
@@ -166,14 +167,6 @@ article h2{
 article p{
 	width: 650px;
 	float: left;
-}
-
-article hr{
-	float: left;
-	width: 100%;
-	text-align: center;
-	border: none;
-	border-top: medium double #66CDAA;
 }
 
 .lugares{
