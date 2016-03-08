@@ -64,7 +64,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
-	var baseUrl = "/turislife/web/js/Mock/publicacao.json";
+	var baseUrl = "/turislife/api/services/PublicacaoService.php";
 
 	this.getPublicacao = function(id){
 		var data = {
