@@ -54,7 +54,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp;
-			console.log(resp);
+			console.log($scope.post);
 		},
 		function(error){
 			$location.path("/404");
