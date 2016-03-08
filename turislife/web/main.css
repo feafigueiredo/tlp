@@ -99,11 +99,19 @@ article{
 	position: relative;
 	background-color: #FAFAFA;
 	width: 1000px;
-	margin: 10px auto 0;
+	margin: 5px auto 0;
 	border-width: 0 1px;
+	border-style: solid;
+}
+article.Trabalho{
 	border-color: #66CDAA;
 }
-
+article.Lugares{
+	border-color: #CD66AA;
+}
+article.Estabelecimentos{
+	border-color: #66AACD;
+}
 article:after{
 	content: "-";
 	display: block;
@@ -115,7 +123,6 @@ article a{
 	text-decoration: none;
 	color: #000;
 	margin: 10px 5px 5px;
-	border-color: #66CDAA;
 }
 article h1{
 	width: 100%;
