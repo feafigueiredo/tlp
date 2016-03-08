@@ -167,6 +167,7 @@ section{
 	width: 1000px;
 	margin: 0 auto;
 	clear: both;
+	padding: 10px;
 }
 
 section:first-child{
