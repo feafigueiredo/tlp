@@ -78,15 +78,6 @@ nav.fixed{
   opacity:0.8;
   z-index:999;
 }
-header.fixed img{
-	display: none;
-}
-header.fixed #nav{
-	margin: 0 auto;
-}
-header.fixed:hover{
-  opacity:1;
-}
 
 section.spaced{
 	margin-top: 70px;
@@ -98,9 +89,10 @@ section{
 	margin: 10px;
 }
 
-#home{
-	background-color: #FAFAFA;
+main{
+	height: 1000px;
 }
+
 article{
 	position: relative;
 	background-color: #FAFAFA;
