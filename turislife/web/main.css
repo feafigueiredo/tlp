@@ -135,7 +135,7 @@ article a{
 	color: #000;
 	margin: 10px 5px 5px;
 }
-article:first-child{
+article > h1{
 	width: 100%;
 	text-align: center;
 	color: #FFF;
