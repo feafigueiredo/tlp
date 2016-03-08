@@ -34,7 +34,7 @@ class ColaboradorDAO{
     	
     	$this->list = array();
 
-    	$newColab = new Publicacao();
+    	$newColab = new Colaborador();
     	foreach ($rs as $dados){
 
     		$newColab->id     = $dados[id];
