@@ -101,25 +101,27 @@ section{
 #home{
 	background-color: #FAFAFA;
 }
-.post{
+article{
 	position: relative;
 	background-color: #FAFAFA;
-	margin: 0 1px solid #66CDAA;
+	margin: 0 auto;
 	
 }
 
-.post:after{
+article:after{
 	content: "-";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
-.post a{
+article a{
 	text-decoration: none;
 	color: #000;
+	margin: 10px 5px 5px;
+	border-color: #66CDAA;
 }
-.post h1{
+article h1{
 	width: 100%;
 	text-align: center;
 	background-color: #66CDAA;
@@ -127,17 +129,12 @@ section{
 	font-size: 15px;
 }
 
-.post a{
-	margin: 10px 5px 5px;
-	border-color: #66CDAA;
-}
-
-.post a:hover{
+article a:hover{
 	color: #5F9EA0;
 	border-color: #5F9EA0;
 }
 
-.post img{
+article img{
 	border-radius: 30%;
 	border: 2px solid;
 	border-color: inherit;
@@ -146,19 +143,19 @@ section{
 	margin: inherit;
 	float: left;
 }
-.post h2{
+article h2{
 	width: 650px;
 	font-size: 25px;
 	margin: inherit;
 	float: left;
 }
 
-.post p{
+article p{
 	width: 650px;
 	float: left;
 }
 
-.post hr{
+article hr{
 	float: left;
 	width: 100%;
 	margin: 10px 10px 0;
