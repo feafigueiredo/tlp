@@ -142,7 +142,7 @@ article > a:hover{
 	border-color: #5F9EA0;
 }
 
-article > img{
+article img{
 	border-radius: 30%;
 	border: 2px solid;
 	border-color: inherit;
@@ -151,7 +151,7 @@ article > img{
 	margin: inherit;
 	float: left;
 }
-article > h2{
+article h2{
 	width: 650px;
 	font-size: 25px;
 	margin: inherit;
