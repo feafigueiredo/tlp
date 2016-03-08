@@ -1,5 +1,5 @@
 <?php
-class Publicacao{
+class Colaborador{
 	// object properties
 	public $id;
 	public $nome;
