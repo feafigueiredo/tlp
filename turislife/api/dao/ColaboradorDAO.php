@@ -44,7 +44,7 @@ class ColaboradorDAO{
     		
     	}
     	
-    	return true;
+    	return $newColab;
     }
 }
 ?>
