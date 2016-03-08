@@ -99,8 +99,9 @@ article{
 	position: relative;
 	background-color: #FAFAFA;
 	width: 1000px;
-	margin: 0 auto;
-	
+	margin: 10px auto 0;
+	border-width: 0 1px;
+	border-color: #66CDAA;
 }
 
 article:after{
