@@ -168,23 +168,7 @@ article p{
 	float: left;
 }
 
-.lugares{
-	background-color: #AAFAAA;
-}
-.estabelecimentos{
-	background-color: #FAAAAA;
-}
-.lugares{
-	background-color: #AAAAFA;
-}
-.trabalho{
-	background-color: #FAAAFA;
-}
-.publicacao{
-	background-color: #AAFAFA;
-}
-
-#content{
+section{
 	width: 1000px;
 	margin: 0 auto;
 	clear: both;
