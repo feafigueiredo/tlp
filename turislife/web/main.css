@@ -106,21 +106,21 @@ article{
 .Trabalho{
 	border-color: #66CDAA;
 }
-.Trabalho:first-child{
+.Trabalho > h1{
 	background-color: #66CDAA;
 }
 
 .Lugares{
 	border-color: #CD66AA;
 }
-.Lugares:first-child{
+.Lugares > h1{
 	background-color: #CD66AA;
 }
 
 .Estabelecimentos{
 	border-color: #66AACD;
 }
-.Estabelecimentos:first-child{
+.Estabelecimentos > h1{
 	background-color: #66AACD;
 }
 article:after{
@@ -135,7 +135,7 @@ article a{
 	color: #000;
 	margin: 10px 5px 5px;
 }
-article h1{
+article:first-child{
 	width: 100%;
 	text-align: center;
 	color: #FFF;
