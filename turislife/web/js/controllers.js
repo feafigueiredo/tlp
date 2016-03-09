@@ -71,7 +71,7 @@ app.controller('PublicarCtrl', ['$rootScope', '$scope', '$location', '$routePara
   function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 	$rootScope.activetab = $location.path();   
 	
-	
+  }	
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
