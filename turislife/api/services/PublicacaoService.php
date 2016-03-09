@@ -52,16 +52,16 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'GET':
 		error_log("GET");
-		$json = file_get_contents("php://input");
+		$json = file_get_contents("http://input");
 		$obj = json_decode($json);
 		
-// 		$pub->id = $_GET["id"];
-// 		$pub->area = $_GET["area"];
-// 		$pub->pag = $_GET["page"];
+		$pub->id = $_GET["id"];
+		$pub->area = $_GET["area"];
+		$pub->pag = $_GET["page"];
 
-		$pub->id = $obj->id;
-		$pub->area = $obj->area;
-		$pub->pag = $obj->page;
+// 		$pub->id = $obj->id;
+// 		$pub->area = $obj->area;
+// 		$pub->pag = $obj->page;
 		
 		error_log("(#)Publicacao(#)");
 		error_log("  Id: $pub->id");
