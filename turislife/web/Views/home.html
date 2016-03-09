@@ -1,4 +1,4 @@
-<article class="{{ post.area }}" ng-repeat="post in posts">
+<article ng-repeat="post in posts">
 	<h1>{{ post.area }} - {{ post.autor.id }}, {{ post.date }}</h1>
 	<a href="/publicacao/{{ post.nome }}#disqus_thread">
 		<img ng-src="{{ post.img }}"/>

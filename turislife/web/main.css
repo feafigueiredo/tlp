@@ -97,26 +97,7 @@ article{
 	margin: 5px auto 0;
 	border-width: 0 1px 1px;
 	border-style: solid solid double;
-}
-.Trabalho{
 	border-color: #66CDAA;
-}
-.Trabalho > h1{
-	background-color: #66CDAA;
-}
-
-.Lugares{
-	border-color: #CD66AA;
-}
-.Lugares > h1{
-	background-color: #CD66AA;
-}
-
-.Estabelecimentos{
-	border-color: #66AACD;
-}
-.Estabelecimentos > h1{
-	background-color: #66AACD;
 }
 article:after{
 	content: "-";
@@ -135,6 +116,7 @@ article > h1{
 	text-align: center;
 	color: #FFF;
 	font-size: 15px;
+	background-color: #66CDAA;
 }
 
 article > a:hover{
