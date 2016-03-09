@@ -55,8 +55,8 @@ switch($_SERVER['REQUEST_METHOD']){
 		$json = file_get_contents("php://input");
 		$obj = json_decode($json);
 		
-		$pub->id = $obj->id;
-		$pub->area = $obj->area;
+		$pub->id = $_GET["id"];
+		$pub->area = $_GET["area"];
 
 		error_log("(#)Publicacao(#)");
 		error_log("  Id: $pub->id");
