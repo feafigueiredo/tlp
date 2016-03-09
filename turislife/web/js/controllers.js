@@ -71,6 +71,9 @@ app.controller('PublicarCtrl', ['$rootScope', '$scope', '$location', '$routePara
   function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 	$rootScope.activetab = $location.path();   
 	
+	$scope.func = function(str){
+		return str.split(" ").join("-").toLowerCase();
+	}
   }	
 ]);
 
