@@ -19,9 +19,6 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 			}
 		}
 
-		console.log("Chamando servico com parametros:");
-		console.log("area: " + area);
-		console.log("page: " + page);
 		PublicacaoService.getPublicacoes(area, page).then(function(resp){
 			$scope.posts = resp;
 		});
@@ -100,7 +97,7 @@ app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/api/publicacoes/";
 
 	this.getPublicacao = function(id){
-		var thisUrl = baseUrl + "/" + id + "/";
+		var thisUrl = baseUrl + id + "/";
 		console.log(thisUrl);
 		return $http.get(thisUrl)
 	    	.then(function(response) {
@@ -109,11 +106,8 @@ app.service('PublicacaoService', ['$http', function($http){
 	}
 	
 	this.getPublicacoes = function(area, page){
-		console.log("Dentro do servico com parametros:");
-		console.log("area: " + area);
-		console.log("page: " + page);
+
 		var thisUrl = this.createUrl(area, page);
-		console.log("URL criada: " + thisUrl);
 		return $http.get(thisUrl)
 	    	.then(function(response) {
 	    		return response.data;
@@ -121,9 +115,6 @@ app.service('PublicacaoService', ['$http', function($http){
 	};
 	
 	this.createUrl = function(area, page){
-		console.log("Criando URL:");
-		console.log("area: " + area);
-		console.log("page: " + page);
 		if(page === null) page = 1;
 		if(area === "") return baseUrl + page + "/";
 		
