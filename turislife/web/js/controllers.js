@@ -79,6 +79,7 @@ app.service('PublicacaoService', ['$http', function($http){
 	
 	this.getPublicacoes = function(area, page){
 		var thisUrl = createUrl(area, page);
+		console.log("URL criada: " + thisUrl);
 		return $http.get(thisUrl)
 	    	.then(function(response) {
 	    		return response.data;
