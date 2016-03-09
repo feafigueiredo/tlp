@@ -67,7 +67,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
-	var baseUrl = "/turislife/api/publicacoes/";
+	var baseUrl = "/api/publicacoes/";
 
 	this.getPublicacao = function(id){
 		var data = {
