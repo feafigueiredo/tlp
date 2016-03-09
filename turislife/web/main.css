@@ -194,6 +194,6 @@ footer > p{
 	width: 300px;
 	height: 200px;
 }
-#escopo input[text]{
+#escopo input[type="text"]{
 	width: 300px
 }
