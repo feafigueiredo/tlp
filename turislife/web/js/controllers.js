@@ -65,7 +65,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 ]);
 
 app.service('PublicacaoService', ['$http', function($http){
-	var baseUrl = "/turislife/api/services/PublicacaoService.php";
+	var baseUrl = "/turislife/api/publicacoes/";
 
 	this.getPublicacao = function(id){
 		var data = {
@@ -78,14 +78,17 @@ app.service('PublicacaoService', ['$http', function($http){
 	}
 	
 	this.getPublicacoes = function(area, page){
-		var data = {
-				"area": area,
-				"page": page
-		};
-		return $http.get(baseUrl, data)
+		var thisUrl = createUrl(area, page);
+		return $http.get(thisUrl)
 	    	.then(function(response) {
 	    		return response.data;
 	        });
 	};
+	
+	this.createUrl(area, page){
+		if(area === "") return baseUrl + page + "/";
+		
+		return baseUrl + area + "/" + page + "/";
+	}
 	
 }]);
