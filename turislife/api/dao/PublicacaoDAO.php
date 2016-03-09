@@ -58,7 +58,7 @@ class PublicacaoDAO{
     	
     	$query = "SELECT id, nome, data, area, autor, resumo, titulo, img FROM $this->table_name";
     	if($pub->area != null){
-    		$query = $query . " WHERE area like '%$pub->area%'";
+    		$query = $query . " WHERE area like '%UPPER($pub->area%)'";
     	}
     	
     	if(!$rs = $this->conn->query($query)){
