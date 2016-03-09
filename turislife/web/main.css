@@ -186,11 +186,11 @@ footer > p{
 	float: left;
 }
 
-#escopo > span{
+#escopo span{
 	width: 100px;
 	display: inline-block;
 }
-#escopo > #resumo{
+#escopo #resumo{
 	width: 300px;
 	height: 200px;
 }
