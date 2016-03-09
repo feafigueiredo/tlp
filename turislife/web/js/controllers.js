@@ -87,6 +87,7 @@ app.service('PublicacaoService', ['$http', function($http){
 	};
 	
 	this.createUrl = function(area, page){
+		if(page === null) page = 1;
 		if(area === "") return baseUrl + page + "/";
 		
 		return baseUrl + area + "/" + page + "/";
