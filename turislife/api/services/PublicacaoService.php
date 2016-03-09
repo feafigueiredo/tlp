@@ -57,10 +57,12 @@ switch($_SERVER['REQUEST_METHOD']){
 		
 		$pub->id = $_GET["id"];
 		$pub->area = $_GET["area"];
-
+		$pub->pag = $_GET["page"];
+		
 		error_log("(#)Publicacao(#)");
 		error_log("  Id: $pub->id");
 		error_log("Area: $pub->area");
+		error_log(" Pag: $pub->pag");
 		$dao->publicacao = $pub;
 
 		if($dao->get()){

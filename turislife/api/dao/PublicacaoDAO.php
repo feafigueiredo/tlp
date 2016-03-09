@@ -53,13 +53,19 @@ class PublicacaoDAO{
     }
     
     public function get(){
+    	$PUB_PER_PAGE = 10;
     	
     	$pub = $this->publicacao;
+    	$inicio = ($pub->pag - 1) * $PUB_PER_PAGE;
     	
     	$query = "SELECT id, nome, data, area, autor, resumo, titulo, img FROM $this->table_name";
     	if($pub->area != null){
     		$query = $query . " WHERE area like '%UPPER($pub->area)%'";
     	}
+    	$query = $query . " LIMIT $inicio, $PUB_PER_PAGE";
+    	
+    	
+    	error_log("# Query: $query");
     	
     	if(!$rs = $this->conn->query($query)){
     		return false;

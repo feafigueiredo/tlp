@@ -9,5 +9,6 @@ class Publicacao{
 	public $autor;
 	public $titulo;
 	public $img;
+	public $pag;
 }
 ?>
