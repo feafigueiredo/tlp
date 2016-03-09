@@ -62,6 +62,9 @@ class PublicacaoDAO{
     	if($pub->area != null){
     		$query = $query . " WHERE area like UPPER('%$pub->area%')";
     	}
+    	if($pub->nome != null){
+    		$query = $query . " WHERE UPPER(nome) like UPPER('%$pub->nome%')";
+    	}
     	$query = $query . " LIMIT $inicio, $PUB_PER_PAGE";
     	
     	

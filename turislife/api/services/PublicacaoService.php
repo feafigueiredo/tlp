@@ -55,12 +55,12 @@ switch($_SERVER['REQUEST_METHOD']){
 		$json = file_get_contents("php://input");
 		$obj = json_decode($json);
 		
-		$pub->id = $_GET["id"];
+		$pub->nome = $_GET["id"];
 		$pub->area = $_GET["area"];
 		$pub->pag = $_GET["page"];
 		
 		error_log("(#)Publicacao(#)");
-		error_log("  Id: $pub->id");
+		error_log("Nome: $pub->nome");
 		error_log("Area: $pub->area");
 		error_log(" Pag: $pub->pag");
 		$dao->publicacao = $pub;
