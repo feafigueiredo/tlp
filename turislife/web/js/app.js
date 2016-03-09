@@ -8,8 +8,13 @@ app.config(function($routeProvider, $locationProvider)
    $routeProvider
  
    .when('/', {
-      templateUrl : '/turislife/web/Views/home.html',
-      controller     : 'HomeCtrl',
+	      templateUrl : '/turislife/web/Views/home.html',
+	      controller     : 'HomeCtrl',
+	   })
+	 
+   .when('/publicar', {
+      templateUrl : '/turislife/web/Views/publicar.html',
+      controller     : 'PublicarCtrl',
    })
  
    .when('/publicacao/:id', {

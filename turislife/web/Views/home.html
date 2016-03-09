@@ -1,5 +1,5 @@
 <article ng-repeat="post in posts">
-	<h1>{{ post.area }} - {{ post.autor.id }}, {{ post.date }}</h1>
+	<h1>{{ post.area }} - {{ post.autor.id }}, {{ post.data }}</h1>
 	<a href="/publicacao/{{ post.nome }}#disqus_thread">
 		<img ng-src="{{ post.img }}"/>
 		<h2>{{ post.titulo }}</h2>

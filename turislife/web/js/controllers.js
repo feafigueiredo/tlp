@@ -66,6 +66,14 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 	}
 ]);
 
+/* PublicarCtrl */
+app.controller('PublicarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
+  function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
+	$rootScope.activetab = $location.path();   
+	
+	
+]);
+
 app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/api/publicacoes/";
 
