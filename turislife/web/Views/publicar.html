@@ -9,19 +9,19 @@
 	</p>
 	<p>
 		<span>Area</span>
-		<select>
-			<option>Trabalho</option>
-			<option>Estabelecimentos</option>
-			<option>Lugares</option>
+		<select ng-model="area">
+			<option value="TRABALHO">Trabalho</option>
+			<option value="ESTABELECIMENTOS">Estabelecimentos</option>
+			<option value="LUGARES">Lugares</option>
 		</select>
 	</p>
 	<p>
 		<span>Imagem</span>
-		<input type="file" ng-model="" />
+		<input type="file" ng-model="img" />
 	</p>
 	<p>
 		<span>Resumo</span>
-		<textarea id="resumo" ng-model="titulo"></textarea>
+		<textarea ng-model="resumo"></textarea>
 	</p>
 	
 </section>

@@ -100,10 +100,7 @@ app.service('PublicacaoService', ['$http', function($http){
 	var baseUrl = "/api/publicacoes/";
 
 	this.getPublicacao = function(id){
-		var data = {
-				"id": id
-		};
-		return $http.get(baseUrl, data)
+		return $http.get(baseUrl + "/" + id)
 	    	.then(function(response) {
 	    		return response.data;
 	        });
