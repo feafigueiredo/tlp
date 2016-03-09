@@ -70,9 +70,10 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 app.controller('PublicarCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
   function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 	$rootScope.activetab = $location.path();   
+	var scope = $scope;
 	
-	$scope.func = function(str){
-		return str.split(" ").join("-").toLowerCase();
+	$scope.func = function(){
+		scope.nome = scope.titulo.split(" ").join("-").toLowerCase();
 	}
   }	
 ]);
