@@ -52,7 +52,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'GET':
 		error_log("GET");
-		$json = file_get_contents("http://input");
+		$json = file_get_contents("php://input");
 		$obj = json_decode($json);
 		
 		$pub->id = $_GET["id"];
