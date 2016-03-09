@@ -73,7 +73,16 @@ app.controller('PublicarCtrl', ['$rootScope', '$scope', '$location', '$routePara
 	var scope = $scope;
 	
 	$scope.func = function(){
-		scope.nome = scope.titulo.split(" ").join("-").toLowerCase();
+		scope.nome = scope.titulo.toLowerCase().split(" ").join("-");
+		scope.nome = scope.nome.split("á").join("a");
+		scope.nome = scope.nome.split("à").join("a");
+		scope.nome = scope.nome.split("ã").join("a");
+		scope.nome = scope.nome.split("é").join("e");
+		scope.nome = scope.nome.split("í").join("i");
+		scope.nome = scope.nome.split("ó").join("o");
+		scope.nome = scope.nome.split("õ").join("o");
+		scope.nome = scope.nome.split("ú").join("u");
+		scope.nome = scope.nome.split("ç").join("c");
 	}
   }	
 ]);
