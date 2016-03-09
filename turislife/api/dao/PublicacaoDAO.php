@@ -57,7 +57,7 @@ class PublicacaoDAO{
     	$pub = $this->publicacao;
     	
     	$query = "SELECT id, nome, data, area, autor, resumo, titulo, img FROM $this->table_name";
-    	if($user->user != null){
+    	if($pub->area != null){
     		$query = $query . " WHERE area like '%$pub->area%'";
     	}
     	
