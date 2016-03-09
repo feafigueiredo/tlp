@@ -13,7 +13,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 				case "trabalho":
 				case "lugares":
 					area = $routeParams.area;
-					page = $routeParams.page;
+					if($routeParams.page != null) page = $routeParams.page;
 					break;
 				default: $location.path('/404');
 			}
