@@ -2,6 +2,7 @@
 app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'PublicacaoService',
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();
+		$rootScope.comentario = false;
 		
 		var area = "";
 		var page = 1;
@@ -24,31 +25,11 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 	}
 ]);
 
-/* LUGARES */
-app.controller('LugaresCtrl', ['$rootScope', '$scope', '$location',
-    function($rootScope, $scope, $location){
-		$rootScope.activetab = $location.path();
-	}
-]);
-
-/* ESTABELECIMENTOS */
-app.controller('EstabelecimentosCtrl', ['$rootScope', '$scope', '$location',
-    function($rootScope, $scope, $location){
-		$rootScope.activetab = $location.path();
-	}
-]);
-
-/* TRABALHO */
-app.controller('TrabalhoCtrl', ['$rootScope', '$scope', '$location',
-    function($rootScope, $scope, $location){
-		$rootScope.activetab = $location.path();     
-	}
-]);
-
 /* PUBLICACAO */
 app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
     function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 		$rootScope.activetab = $location.path();   
+		$rootScope.comentario = true;
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp;
