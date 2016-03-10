@@ -21,10 +21,12 @@ var disqus_config = function () {
 };
 
   if (enableDisqus.loaded) {
+	  console.log("Reseting DISQUS!");
     DISQUS.reset({
       reload: true
     });
   } else {
+	  console.log("Initializing DISQUS!");
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//meusappsesyes.disqus.com/embed.js';
