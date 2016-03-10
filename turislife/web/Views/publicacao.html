@@ -11,14 +11,12 @@
 <section id="disqus_thread"></section>
 <script>
 /* * * Disqus Reset Function * * */
-function (newIdentifier, newUrl, newTitle, newLanguage) {
-    DISQUS.reset({
-        reload: true,
-        config: function () {
-            this.page.identifier = window.page_id;
-            this.page.url = window.location;
-        }
-    });
-};
+   DISQUS.reset({
+       reload: true,
+       config: function () {
+           this.page.identifier = window.page_id;
+           this.page.url = window.location;
+       }
+   });
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
