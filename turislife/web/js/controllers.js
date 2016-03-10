@@ -98,20 +98,20 @@ app.service('PublicacaoService', ['$http', function($http){
 
 	this.getPublicacao = function(id){
 		var thisUrl = "/api/post/" + id + "/";
-		console.log(thisUrl);
-		return $http.get(thisUrl)
-	    	.then(function(response) {
-	    		return response.data;
-	        });
-	}
+		return this.exec(thisUrl);
+	};
 	
 	this.getPublicacoes = function(area, page){
 
 		var thisUrl = this.createUrl(area, page);
-		return $http.get(thisUrl)
-	    	.then(function(response) {
-	    		return response.data;
-	        });
+		return this.exec(thisUrl);
+	};
+	
+	this.exec = function(url){
+		console.log("Calling: " + url);
+		return $http.get(url).then(function(response) {
+    		return response.data;
+        });
 	};
 	
 	this.createUrl = function(area, page){
@@ -119,6 +119,6 @@ app.service('PublicacaoService', ['$http', function($http){
 		if(area === "") return baseUrl + page + "/";
 		
 		return baseUrl + area + "/" + page + "/";
-	}
+	};
 	
 }]);

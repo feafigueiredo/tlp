@@ -67,8 +67,8 @@ switch($_SERVER['REQUEST_METHOD']){
 
 		if($dao->get()){
 			echo json_encode($dao->list);
+			break; // GET
 		}
-		break; // GET
 
 	default:
 		error_log( "Solicitacao invalida." );
