@@ -23,7 +23,7 @@ var disqus_config = function () {
 function enableDisqus() { 
 	  disqus_config.params = disqus_config;
 
-	  if (enableDisqus.loaded) {
+	  if (window.disqusLoaded) {
 		  console.log("Reseting Disqus!");
 	    DISQUS.reset({
 	      reload: true

@@ -2,7 +2,6 @@
 app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams', 'PublicacaoService',
     function($rootScope, $scope, $location, $routeParams, PublicacaoService){
 		$rootScope.activetab = $location.path();
-		$rootScope.comentario = false;
 		
 		var area = "";
 		var page = 1;
@@ -29,7 +28,7 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
     function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
 		$rootScope.activetab = $location.path();   
-		$rootScope.comentario = true;
+		$window.disqusLoaded = true;
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp;
