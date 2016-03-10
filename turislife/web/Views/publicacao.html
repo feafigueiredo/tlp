@@ -21,12 +21,25 @@ var disqus_config = function () {
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
+	var d = document, s = d.createElement('script');
 
-s.src = '//meusappsesyes.disqus.com/embed.js';
+	s.src = '//meusappsesyes.disqus.com/embed.js';
 
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
 })();
+
+/* * * Disqus Reset Function * * */
+var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+    DISQUS.reset({
+        reload: true,
+        config: function () {
+            this.page.identifier = newIdentifier;
+            this.page.url = newUrl;
+            this.page.title = newTitle;
+            this.language = newLanguage;
+        }
+    });
+};
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

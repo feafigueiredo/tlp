@@ -7,7 +7,6 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 		var page = 1;
 		console.log("Path: " + $location.path());
 		if("/" != $location.path()){	
-			console.log("Area: " + $routeParams.area);
 			switch($routeParams.area){
 				case "estabelecimentos":
 				case "trabalho":
