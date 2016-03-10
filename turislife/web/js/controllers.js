@@ -31,7 +31,7 @@ app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routePa
 		$window.disqusLoaded = true;
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
-			$scope.post = resp;
+			$scope.post = resp[0];
 			console.log($scope.post);
 		},
 		function(error){
@@ -81,7 +81,6 @@ app.service('PublicacaoService', ['$http', function($http){
 	};
 	
 	this.getPublicacoes = function(area, page){
-
 		var thisUrl = this.createUrl(area, page);
 		return this.exec(thisUrl);
 	};
