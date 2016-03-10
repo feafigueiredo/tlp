@@ -8,13 +8,35 @@
 	<h2>{{ post.autor.name }}</h2>
 	<p>{{ post.autor.abstract }}</p>
 </footer>
+<section id="disqus_thread" ng-show="comentario"></section>
 <script>
-/* * * Disqus Reset Function * * */
-(DISQUS.reset({
-    reload: true,
-    config: function () {
-        this.page.identifier = window.page_id;
-        this.page.url = window.location;
-    }
-}))();
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/**/
+var disqus_config = function () {
+	this.page.url = window.location;
+	this.page.identifier = window.page_id;
+};
+
+function enableDisqus(config, sso_config) { 
+	  config.sso = sso_config;
+	  disqus_config.params = config;
+
+	  if (enableDisqus.loaded) {
+	    DISQUS.reset({
+	      reload: true
+	    });
+	  } else {
+	    (function() {
+	      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	      dsq.src = '//meusappsesyes.disqus.com/embed.js';
+	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	 
+	    enableDisqus.loaded = true;
+	  }
+	}
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
