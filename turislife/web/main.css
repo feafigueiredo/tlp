@@ -125,7 +125,7 @@ article > a:hover{
 }
 
 article img{
-	border-radius: 30%;
+	border-radius: 10%;
 	border: 2px solid;
 	border-color: inherit;
 	height: 200px;
@@ -177,7 +177,7 @@ footer > img{
 footer > h2{
 	width: 650px;
 	font-size: 25px;
-	margin: inherit;
+	margin: 10px;
 	float: left;
 }
 
