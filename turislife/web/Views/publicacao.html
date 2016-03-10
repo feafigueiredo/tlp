@@ -1,12 +1,12 @@
 <section>
-	<h1>{{ post.title }}</h1>
+	<h1>{{ post.titulo }}</h1>
 	<img ng-src="{{ post.img }}"/>
-	<p>{{ post.abstract }}</p>
+	<p>{{ post.resumo }}</p>
 </section>
 <footer>
-	<img ng-src="{{ post.autor.img }}"/>
-	<h2>{{ post.autor.name }}</h2>
-	<p>{{ post.autor.abstract }}</p>
+	<img ng-src="{{ post.autor.foto }}"/>
+	<h2>{{ post.autor.nome }}</h2>
+	<p>{{ post.autor.resumo }}</p>
 </footer>
 <section id="disqus_thread"></section>
 <script>
