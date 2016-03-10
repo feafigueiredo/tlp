@@ -10,27 +10,13 @@
 </footer>
 <section id="disqus_thread"></section>
 <script>
-/**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
-/**/
-var disqus_config = function () {
-	this.page.url = window.location;
-	this.page.identifier = window.page_id;
-};
-
-
-
 /* * * Disqus Reset Function * * */
-var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+function (newIdentifier, newUrl, newTitle, newLanguage) {
     DISQUS.reset({
         reload: true,
         config: function () {
-            this.page.identifier = newIdentifier;
-            this.page.url = newUrl;
-            this.page.title = newTitle;
-            this.language = newLanguage;
+            this.page.identifier = window.page_id;
+            this.page.url = window.location;
         }
     });
 };
