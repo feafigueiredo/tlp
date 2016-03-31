@@ -37,10 +37,10 @@ class ColaboradorDAO{
     	$newColab = new Colaborador();
     	foreach ($rs as $dados){
 
-    		$newColab->id     = $dados[id];
-    		$newColab->nome   = $dados[nome];
-    		$newColab->foto   = $dados[foto];
-    		$newColab->resumo = $dados[resumo];
+    		$newColab->id     = utf8_encode($dados["id"]);
+    		$newColab->nome   = utf8_encode($dados["nome"]);
+    		$newColab->foto   = utf8_encode($dados["foto"]);
+    		$newColab->resumo = utf8_encode($dados["resumo"]);
     		
     	}
     	

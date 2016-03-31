@@ -3,12 +3,16 @@
 	<img ng-src="{{ post.img }}"/>
 	<p>{{ post.resumo }}</p>
 </section>
-<footer>
-	<img ng-src="{{ post.autor.foto }}"/>
-	<h2>{{ post.autor.nome }}</h2>
+<footer class="post">
+	<h2 class="hidden">Autor</h2>
+	<img title="Foto do autor" alt="[Foto do autor]" ng-src="{{ post.autor.foto }}"/>
+	<p class="autor">{{ post.autor.nome }}</p>
 	<p>{{ post.autor.resumo }}</p>
 </footer>
-<section id="disqus_thread"></section>
+<section>
+	<h1 class="hidden">Comentários</h1>
+	<div id="disqus_thread"></div>
+</section>
 <script>
 /**
 * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

@@ -1,6 +1,10 @@
 <?php
 
 // instantiate dao object
+include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/config/Database.php';
+$db = new Database();
+
+// instantiate dao object
 include_once $_SERVER['DOCUMENT_ROOT'].'/turislife/api/dao/PublicacaoDAO.php';
 $dao = new PublicacaoDAO($db);
 
@@ -55,9 +59,15 @@ switch($_SERVER['REQUEST_METHOD']){
 		$json = file_get_contents("php://input");
 		$obj = json_decode($json);
 		
-		$pub->nome = $_GET["id"];
-		$pub->area = $_GET["area"];
-		$pub->pag = $_GET["page"];
+		if(isset($_GET['id'])) {
+			$pub->nome = $_GET["id"];
+		}
+		if(isset($_GET['area'])) {
+			$pub->area = $_GET["area"];
+		}
+		if(isset($_GET['page'])) {
+			$pub->pag = $_GET["page"];
+		}
 		
 		error_log("(#)Publicacao(#)");
 		error_log("Nome: $pub->nome");
@@ -66,6 +76,8 @@ switch($_SERVER['REQUEST_METHOD']){
 		$dao->publicacao = $pub;
 
 		if($dao->get()){
+			error_log("Retornando a lista.");
+			error_log($dao->list[0]->img);
 			echo json_encode($dao->list);
 			break; // GET
 		}

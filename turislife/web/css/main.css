@@ -55,7 +55,7 @@ nav{
 	padding: 2px 0;
 }
 
-h1.hidden{
+.hidden{
 	display: none;
 }
 
@@ -109,10 +109,6 @@ nav.fixed:hover{
 }
 section.spaced{
 	margin-top: 70px;
-}
-
-main{
-	height: 1000px;
 }
 
 article{
@@ -211,9 +207,9 @@ footer{
 	background-color: #66A06D;
 	border-color: #66A06D; 
 	color: #FFF;
-	margin: 0 auto;
+	margin: 10px auto 0;
 }
-footer > img{
+footer.post > img{
 	border-radius: 30%;
 	border: 2px solid;
 	border-color: inherit;
@@ -222,14 +218,14 @@ footer > img{
 	margin: 10px;
 	float: left;
 }
-footer > h2{
+footer.post > p.autor{
 	width: 650px;
 	font-size: 25px;
 	margin: 10px;
 	float: left;
 }
 
-footer > p{
+footer.post > p{
 	width: 650px;
 	float: left;
 }

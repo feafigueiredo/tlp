@@ -78,21 +78,25 @@ class PublicacaoDAO{
     	
     	$this->list = array();
 
+    	$cont = 0;
     	foreach ($rs as $dados){
+    		$cont++;
+    		error_log("Linha: $cont");
     		$newPub = new Publicacao();
-
-    		$newPub->id     = $dados[id];
-    		$newPub->nome   = $dados[nome];
-    		$newPub->data   = $dados[data];
-    		$newPub->area   = $dados[area];
-    		$newPub->resumo = $dados[resumo];
-    		$newPub->titulo = $dados[titulo];
-    		$newPub->img    = $dados[img];
+    		
+    		$newPub->id     = utf8_encode($dados["id"]);
+    		$newPub->nome   = utf8_encode($dados["nome"]);
+    		$newPub->data   = utf8_encode($dados["data"]);
+    		$newPub->area   = utf8_encode($dados["area"]);
+    		$newPub->resumo = utf8_encode($dados["resumo"]);
+    		$newPub->titulo = utf8_encode($dados["titulo"]);
+    		$newPub->img    = utf8_encode($dados["img"]);
     		
     		$colabDAO = new ColaboradorDAO($this->conn);
     		$colab = new Colaborador();
-    		$colab->id = $dados[autor];
+    		$colab->id = utf8_encode($dados["autor"]);
     		
+    		$colabDAO->colaborador = $colab;
     		$newPub->autor = $colabDAO->get();
     		
     		array_push($this->list, $newPub);

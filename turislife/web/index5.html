@@ -13,7 +13,7 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var nav = $("nav");
+			var nav = $("#mainNav");
 			var view = $("#view");
 	
 			$(window).scroll(function() {
@@ -35,7 +35,7 @@
 			src="/turislife/web/images/favicon.jpg" />
 		<h1>TURISLIFE</h1>
 	</header>
-	<nav>
+	<nav id="mainNav">
 		<h1 class="hidden">Navegação</h1>
 		<ul>
 			<li ng-class="{active: activetab == '/'}"><a href="/">Página
@@ -49,6 +49,33 @@
 		</ul>
 	</nav>
 	<main ng-view> </main>
+	<footer>
+		<h1 class="hidden">Rodapé</h1>
+		<p class="tagline">contato@turislife.com</p>
+		<nav>
+			<h1 class="hidden">TurisLife - Mídias Sociais</h1>
+			<ul>
+				<li>
+					<a title="Curta a página do TurisLife no Facebook" target="_blank"
+						href="//www.facebook.com/blogTurisLife/">
+						facebook
+					</a> 
+				</li>
+				<li>
+					<a title="Siga o TurisLife no Twitter" target="_blank"
+						href="//twitter.com/blogTurisLife">
+						twitter
+					</a> 
+				</li>
+				<li>
+					<a title="Siga o TurisLife no Instagram" target="_blank"
+						href="//www.instagram.com/turislife/">
+						instagram
+					</a> 
+				</li>
+			</ul>
+		</nav>
+	</footer>
 	<script src="/turislife/web/js/angular.min.js"></script>
 	<script src="/turislife/web/js/angular-route.min.js"></script>
 
