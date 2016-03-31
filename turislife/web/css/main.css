@@ -137,28 +137,29 @@ article > header{
 	text-align: center;
 	color: #FFF;
 	font-size: 15px;
+	height: 20px
 	background-color: #66A06D;
 }
 
 article > footer{
 	position: absolute;
 	bottom: 0;
-	height: 20px;
+	height: 40px;
 	background-color: #ADA;
   	opacity:0.8;
 }
 article > footer:hover{
-	position: absolute;
-	bottom: 0;
-	height: 20px;
 	background-color: #ADA;
   	opacity:1;
 }
 
 article > footer > a{
+	width: 100%;
+	height: 100%;
 	text-decoration: none;
 	color: #000;
-	margin: 10px 5px 5px;
+	font-size: 35px;
+	text-align: center;
 }
 
 article > footer:hover > a{
