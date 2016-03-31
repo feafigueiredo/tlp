@@ -55,6 +55,10 @@ nav{
 	padding: 2px 0;
 }
 
+h1.hidden{
+	display: none;
+}
+
 nav ul{
 	display: inline-block;
 	border-width: 2px 0;
@@ -127,22 +131,39 @@ article:after{
 	clear: both;
 	visibility: hidden;
 }
-article > a{
-	text-decoration: none;
-	color: #000;
-	margin: 10px 5px 5px;
-}
-article > h1{
+
+article > header{
 	width: 100%;
 	text-align: center;
 	color: #FFF;
 	font-size: 15px;
-	background-color: #66CDAA;
+	background-color: #66A06D;
 }
 
-article > a:hover{
-	color: #5F9EA0;
-	border-color: #5F9EA0;
+article > footer{
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	background-color: #ADA;
+  	opacity:0.8;
+}
+article > footer:hover{
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	background-color: #ADA;
+  	opacity:1;
+}
+
+article > footer > a{
+	text-decoration: none;
+	color: #000;
+	margin: 10px 5px 5px;
+}
+
+article > footer:hover > a{
+	color: #66CDAA;
+	border-color: #66CDAA;
 }
 
 article img{
@@ -154,7 +175,7 @@ article img{
 	margin: inherit;
 	float: left;
 }
-article h2{
+article h1{
 	width: 650px;
 	font-size: 25px;
 	margin: inherit;
