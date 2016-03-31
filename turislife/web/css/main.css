@@ -1,3 +1,8 @@
+@font-face {
+	font-family: cityscape;
+	src: url(../fonts/cityscape.woff);
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -17,12 +22,28 @@ header{
 	width: 1000px;
 	text-align: center;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 header img{
-	width: 1000px;
-	height: 100px;
-	margin: 0 auto;
+	margin: 10px;
+	height: 80px;
+	float: left;
+}
+header h1{
+	text-align: left;
+	float: left;
+	margin: 10px;
+	color: #DEDEDE;
+	font-family: cityscape;
+	font-size: 80px;
+	font-weight: normal;
+	font-style: normal;
+}
+header p{
+	float:left;
+	margin: 10px;
+	color: #FEFEFE;
 }
 nav{
 	display: block;
@@ -186,7 +207,7 @@ footer > p{
 	float: left;
 }
 
-#escopo span{
+.escopo span{
 	width: 100px;
 	display: inline-block;
 }
@@ -194,6 +215,6 @@ textarea{
 	width: 600px;
 	height: 300px;
 }
-#escopo input[type="text"]{
+.escopo input[type="text"]{
 	width: 300px
 }
