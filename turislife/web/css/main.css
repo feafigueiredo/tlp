@@ -141,6 +141,10 @@ article > header{
 	background-color: #66A06D;
 }
 
+article > section{
+	margin: 5px;
+}
+
 article > footer{
 	position: absolute;
 	bottom: 0;
