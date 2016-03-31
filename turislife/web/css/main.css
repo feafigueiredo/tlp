@@ -68,6 +68,10 @@ nav ul{
 }
 
 nav ul li{
+	display: inline-block;
+	margin: 5px;
+}
+#mainNav ul li{
 	display: block;
 	width: 200px;
 	float: left;
@@ -81,17 +85,17 @@ nav ul li{
 	cursor: pointer;
 }
 
-nav ul li.active{
+#mainNav ul li.active{
 	background-color: #FFF;
 	color: #66A06D;
 }
 
-nav ul li:hover{
+#mainNav ul li:hover{
 	background-color: #FFF;
 	color: #5F9EA0;
 }
 
-nav a{
+a{
 	text-decoration: none;
 	color: inherit;
 }
@@ -133,12 +137,8 @@ article > header{
 	text-align: center;
 	color: #FFF;
 	font-size: 15px;
-	height: 20px;
+	height: 15px;
 	background-color: #66A06D;
-}
-
-article > section{
-	margin: 5px;
 }
 
 article > footer{
@@ -146,10 +146,9 @@ article > footer{
 	bottom: 0;
 	height: 40px;
 	background-color: #ADA;
-  	opacity:0.8;
+  	opacity:0.4;
 }
 article > footer:hover{
-	background-color: #ADA;
   	opacity:1;
 }
 
@@ -157,15 +156,13 @@ article > footer > a{
 	display: block;
 	width: 100%;
 	height: 100%;
-	text-decoration: none;
 	color: #000;
 	font-size: 35px;
 	text-align: center;
 }
 
-article > footer:hover > a{
-	color: #66CDAA;
-	border-color: #66CDAA;
+article a:hover{
+	text-decoration: underline;
 }
 
 article img{
@@ -174,14 +171,15 @@ article img{
 	border-color: inherit;
 	height: 200px;
 	width: 300px;
-	margin: inherit;
+	margin: 5px;
 	float: left;
 }
 article h1{
 	width: 650px;
 	font-size: 25px;
-	margin: inherit;
+	margin: 5px;
 	float: left;
+	color: #66A06D;
 }
 
 article p{
@@ -240,4 +238,12 @@ textarea{
 }
 .escopo input[type="text"]{
 	width: 300px
+}
+
+.no-post > h1{
+	width: 100%;
+}
+
+.center{
+	text-align: center;
 }
