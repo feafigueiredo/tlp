@@ -2,7 +2,7 @@
 class Database{ // specify your own database credentials 
 	public $conn; // get the database connection 
 
-	private $host     = "localhost"; 
+	private $host     = "mysql.hostinger.com.br"; 
 	private $db_name  = "u577336267_apps"; 
 	private $username = "u577336267_adm"; 
 	private $password = "H0st1ng3r!"; 
