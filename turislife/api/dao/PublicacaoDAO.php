@@ -59,11 +59,11 @@ class PublicacaoDAO{
     	$ehPublicacao = $pub->nome != null;
     	$query = "SELECT p.id, p.nome, p.data, p.area, p.autor, p.resumo, p.titulo, p.img "; 
     	if($ehPublicacao){
-    		$query = $query . ", tp.texto FROM Publicacao p, Texto_Publicacao tp 
+    		$query = $query . ", tp.texto FROM publicacao p, texto_publicacao tp 
     			WHERE p.id = tp.id
     			AND UPPER(p.nome) like UPPER('%$pub->nome%')";
     	}else{
-    		$query = $query . "FROM Publicacao p";
+    		$query = $query . "FROM publicacao p";
 	    	if($pub->area != null){
 	    		$query = $query . " WHERE area like UPPER('%$pub->area%') OR area = ''";
 	    	}
