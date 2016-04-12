@@ -1,13 +1,15 @@
-<section>
+<section class="publicacao">
 	<h1>{{ post.titulo }}</h1>
-	<img ng-src="{{ post.img }}"/>
-	<p>{{ post.resumo }}</p>
+	<p class="resumo">{{ post.resumo }}</p>
+	<time>{{ post.data | date:'dd/MM/yyyy' }}</time>
+	<section ng-bind-html="post.texto"></section>
 </section>
 <footer class="post">
 	<h2 class="hidden">Autor</h2>
 	<img title="Foto do autor" alt="[Foto do autor]" ng-src="{{ post.autor.foto }}"/>
 	<p class="autor">{{ post.autor.nome }}</p>
 	<p>{{ post.autor.resumo }}</p>
+
 </footer>
 <section>
 	<h1 class="hidden">Comentários</h1>

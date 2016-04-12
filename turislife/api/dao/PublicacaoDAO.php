@@ -9,7 +9,6 @@ class PublicacaoDAO{
       
     // database connection and table name
     private $conn;
-    private $table_name = "Publicacao";
 
     public $list;
     public $publicacao;
@@ -57,13 +56,16 @@ class PublicacaoDAO{
     	
     	$pub = $this->publicacao;
     	$inicio = ($pub->pag - 1) * $PUB_PER_PAGE;
-    	
-    	$query = "SELECT id, nome, data, area, autor, resumo, titulo, img FROM $this->table_name";
-    	if($pub->nome != null){
-    		$query = $query . " WHERE UPPER(nome) like UPPER('%$pub->nome%')";
+    	$ehPublicacao = $pub->nome != null;
+    	$query = "SELECT p.id, p.nome, p.data, p.area, p.autor, p.resumo, p.titulo, p.img "; 
+    	if($ehPublicacao){
+    		$query = $query . ", tp.texto FROM Publicacao p, Texto_Publicacao tp 
+    			WHERE p.id = tp.id
+    			AND UPPER(p.nome) like UPPER('%$pub->nome%')";
     	}else{
+    		$query = $query . "FROM Publicacao p";
 	    	if($pub->area != null){
-	    		$query = $query . " WHERE area like UPPER('%$pub->area%')";
+	    		$query = $query . " WHERE area like UPPER('%$pub->area%') OR area = ''";
 	    	}
     		
 	    	$query = $query . " LIMIT $inicio, $PUB_PER_PAGE";
@@ -92,6 +94,9 @@ class PublicacaoDAO{
     		$newPub->titulo = utf8_encode($dados["titulo"]);
     		$newPub->img    = utf8_encode($dados["img"]);
     		
+    		if($ehPublicacao){
+    			$newPub->texto = utf8_encode($dados["texto"]);
+    		}
     		$colabDAO = new ColaboradorDAO($this->conn);
     		$colab = new Colaborador();
     		$colab->id = utf8_encode($dados["autor"]);

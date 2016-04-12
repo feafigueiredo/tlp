@@ -31,30 +31,31 @@
 </head>
 
 <body>
-	<header>
-		<img title="Logo TurisLife" alt="[Logo TurisLife]"
-			src="/turislife/web/images/favicon.jpg" />
-		<h1>TURISLIFE</h1>
+	<header class="main">
+		<h1>TurisLife</h1>
+		<p class="tagline">Experiências no Turismo</p>
 	</header>
 	<nav id="mainNav">
 		<h1 class="hidden">Navegação</h1>
 		<ul>
 			<li ng-class="{active: activetab == '/'}"><a href="/">Página
 					Inicial</a></li>
-			<li ng-class="{active: activetab == '/lugares'}"><a
-				href="/lugares">Lugares</a></li>
-			<li ng-class="{active: activetab == '/estabelecimentos'}"><a
-				href="/estabelecimentos">Estabelecimentos</a></li>
-			<li ng-class="{active: activetab == '/trabalho'}"><a
-				href="/trabalho">Trabalho</a></li>
+			<li ng-class="{active: activetab == '/estudar-turismo'}"><a
+				href="/estudar-turismo">Estudar Turismo</a></li>
+			<li ng-class="{active: activetab == '/pe-na-estrada'}"><a
+				href="/pe-na-estrada">Pé na Estrada</a></li>
+			<li ng-class="{active: activetab == '/turismo-em-casa'}"><a
+				href="/turismo-em-casa">Turismo em Casa</a></li>
+			<li ng-class="{active: activetab == '/profissional'}"><a
+				href="/profissional">Profissional</a></li>
 		</ul>
 	</nav>
 	<main ng-view> </main>
 	<footer>
 		<h1 class="hidden">Rodapé</h1>
-		<p class="tagline center">contato@turislife.com</p>
+		<p class="tagline center hidden">contato@turislife.com</p>
 		<nav>
-			<h1>TurisLife - Mídias Sociais</h1>
+			<h1 class="hidden">TurisLife - Mídias Sociais</h1>
 			<ul>
 				<li>
 					<a title="Curta a página do TurisLife no Facebook" target="_blank"

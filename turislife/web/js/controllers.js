@@ -8,9 +8,10 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 		console.log("Path: " + $location.path());
 		if("/" != $location.path()){	
 			switch($routeParams.area){
-				case "estabelecimentos":
-				case "trabalho":
-				case "lugares":
+				case "estudar-turismo":
+				case "pe-na-estrada":
+				case "turismo-em-casa":
+				case "profissional":
 					area = $routeParams.area;
 					if($routeParams.page != null) page = $routeParams.page;
 					break;
@@ -25,13 +26,14 @@ app.controller('HomeCtrl', ['$rootScope', '$scope', '$location', '$routeParams',
 ]);
 
 /* PUBLICACAO */
-app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', 'PublicacaoService',
-    function($rootScope, $scope, $location, $routeParams, $window, PublicacaoService){
+app.controller('PublicacaoCtrl', ['$rootScope', '$scope', '$location', '$routeParams', '$window', '$sce', 'PublicacaoService',
+    function($rootScope, $scope, $location, $routeParams, $window, $sce, PublicacaoService){
 		$rootScope.activetab = $location.path();   
 		$window.disqusLoaded = true;
 		
 		PublicacaoService.getPublicacao($routeParams.id).then(function(resp){
 			$scope.post = resp[0];
+			$scope.post.texto = $sce.trustAsHtml($scope.post.texto);
 			console.log($scope.post);
 		},
 		function(error){
